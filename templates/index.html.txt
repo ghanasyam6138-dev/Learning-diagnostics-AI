@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LearnSense – Early Screening Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>LearnSense</h1>
+    <p>Early Screening of Learning Difficulties Using Typing Behavior</p>
+  </header>
+
+  <section>
+    <h2>Problem</h2>
+    <p>
+      Learning disabilities often go undetected during early academic stages,
+      leading to academic struggles and low confidence.
+    </p>
+  </section>
+
+  <section>
+    <h2>Typing Task</h2>
+    <p>Type the sentence shown below:</p>
+    <p>
+      <strong>The cat is playing in the garden.</strong>
+    </p>
+
+    <form>
+      <textarea rows="5" cols="50" placeholder="Start typing here..."  onfocus="startTyping()" onkeydown="recordKey(event)"></textarea>
+      <br><br>
+      <button type="button" onclick="analyzeTyping()">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Collected Metrics</h2>
+    <ul>
+      <li>Total time taken</li>
+      <li>Total keystrokes</li>
+      <li>Number of backspaces</li>
+      <li>Number of long pauses</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Screening Result</h2>
+    <p>Risk Level: <strong>Low / Mild / Needs Attention</strong></p>
+    <p>Reason: Typing behavior indicators</p>
+  </section>
+
+  <section>
+    <h2>Ethical Note</h2>
+    <p>
+      This system provides only early screening indicators.
+      It does not diagnose any learning disability.
+      Professional evaluation is recommended if concerns arise.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 LearnSense | Ethical & Responsible AI</p>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
