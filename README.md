@@ -1,11 +1,11 @@
 # Learning-diagnostics-AI
 # Early Screening of Learning Difficulties Using Typing Behavior
 
-📌 Problem Statement
+**Problem Statement**
 Learning disabilities often go undetected during early academic stages.  
 Because early signs are subtle and formal assessments are limited, many children do not receive timely support, which can lead to long-term academic and emotional challenges.
 
-💡 Proposed Solution
+**Proposed Solution**
 This project presents a **browser-based, AI-assisted early screening tool** that analyzes **typing behavior** to identify **early risk indicators** of learning difficulties.
 
 Instead of focusing on *what* a child types, the system analyzes *how* the child types — such as speed, pauses, and corrections.
@@ -45,21 +45,21 @@ The system returns:
   - Needs Attention
 - **Explainable reasons** (e.g., “Frequent pauses”, “High correction rate”)
 
-## ⚖️ Ethical Considerations
+## Ethical Considerations
 - This tool is **not a medical or clinical diagnostic system**
 - No user data is stored or shared
 - Results are **screening indicators only**
 - Designed to assist educators, not replace professionals
 - Parental and institutional consent is assumed
 
-## 🧩 Project Structure
+## Project Structure
 
-## 🛠️ Technologies Used
+## Technologies Used
 - HTML
 - JavaScript
 - Browser-based execution (no backend required)
 
-## ▶️ How to Run the Project
+## How to Run the Project
 1. Download or clone the repository
 2. Open `index.html` in any modern web browser
 3. Type the given sentence
@@ -67,7 +67,7 @@ The system returns:
 
 No installation or server setup is required.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 - Add numeracy (math) screening module
 - Train ML models using anonymized educational data
 - Age-specific and language-specific thresholds
@@ -76,7 +76,7 @@ No installation or server setup is required.
 ## 🏁 Conclusion
 This project demonstrates how **simple behavioral signals** and **explainable AI** can be used to support **early educational intervention**, while remaining ethical, transparent, and accessible.
 
-## 📜 Disclaimer
+## Disclaimer
 This project is intended for **educational and research purposes only**.  
 It does not provide medical or psychological diagnoses.
 
