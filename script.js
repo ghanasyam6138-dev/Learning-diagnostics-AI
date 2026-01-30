@@ -1,3 +1,15 @@
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+
+  const btn = document.getElementById("themeToggle");
+  if (document.body.classList.contains("dark")) {
+    btn.innerText = "☀️ Light Mode";
+  } else {
+    btn.innerText = "🌙 Dark Mode";
+  }
+}
+
+
 let startTime = null;
 let endTime = null;
 
@@ -184,6 +196,7 @@ function SubmitEvent()
     document.getElementById("typingArea").value = "";
     document.getElementById("typingArea").focus();
     ending();
+    document.getElementById("timeTaken").textContent = "—"; document.getElementById("keystrokes").textContent = "—"; document.getElementById("backspaces").textContent = "—"; document.getElementById("pauses").textContent = "—"; document.getElementById("Risk").textContent = "Low / Mild / Needs Attention";
   }
   if(targetSentence==typedSentence)
   {
@@ -193,4 +206,38 @@ function SubmitEvent()
 
 
   console.log(wpm);
+}
+
+function resetTest() {
+  // Reset textarea
+  document.getElementById("typingArea").value = "";
+
+  // Reset metrics display
+  document.getElementById("timeTaken").innerText = "—";
+  document.getElementById("keystrokes").innerText = "—";
+  document.getElementById("backspaces").innerText = "—";
+  document.getElementById("pauses").innerText = "—";
+
+  // Reset result
+  document.getElementById("Risk").innerText = "Low / Mild / Needs Attention";
+  document.getElementById("Reason").innerText = "Reason: Typing behavior indicators";
+
+  // Reset match message (if any)
+  const matchDiv = document.getElementById("Match");
+  if (matchDiv) {
+    matchDiv.innerText = "";
+  }
+
+  // Reset JS tracking variables
+  startTime = null;
+  lastKeyTime = null;
+  totalKeystrokes = 0;
+  backspaceCount = 0;
+  longPauseCount = 0;
+}
+function enterSubmit(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    SubmitEvent();
+  }
 }

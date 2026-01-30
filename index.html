@@ -8,11 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="initialize()">
+<body onload="initialize()"> 
 
   <header>
     <h1>LearnSense</h1>
     <p>Early Screening of Learning Difficulties Using Typing Behavior</p>
+    <button id="themeToggle" onclick="toggleTheme()">
+  🌙 Dark Mode
+</button>
+
   </header>
 
   <section>
@@ -31,12 +35,12 @@
     </p>
 
     <form>
-      <textarea id="typingArea" rows="5" cols="50" placeholder="Start typing here..."  onfocus="startTyping()" onkeydown="recordKey(event)"></textarea>
+      <textarea  id="typingArea" rows="5" cols="50" placeholder="Start typing here..."  onfocus="startTyping()"  onkeydown="recordKey(event); enterSubmit(event)"></textarea>
       <br>
       <div id="Match"></div>
       <br>
-
-      <button type="button" onclick="SubmitEvent()">Submit</button>
+      <button type="button" onclick="SubmitEvent()" >Submit</button>
+      <button type="button" onclick="resetTest()">reset</button>
     </form>
   </section>
 
@@ -50,7 +54,7 @@
     </ul>
   </section>
 
-  <section>
+ <section>
     <h2>Screening Result</h2>
     <p>Risk Level: <strong id="Risk">Low / Mild / Needs Attention</strong></p>
     <p id="Reason">Reason: Typing behavior indicators</p>
@@ -68,9 +72,7 @@
   <footer>
     <p>© 2026 LearnSense | Ethical & Responsible AI</p>
   </footer>
-  <script src="script.js">
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
