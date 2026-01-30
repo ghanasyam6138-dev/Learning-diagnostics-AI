@@ -10,11 +10,11 @@ This project presents a **browser-based, AI-assisted early screening tool** that
 
 Instead of focusing on *what* a child types, the system analyzes *how* the child types — such as speed, pauses, and corrections.
 
-⚠️ **Important:**  
+**Important:**  
 This system **does NOT diagnose** learning disabilities.  
 It only provides **early screening indicators** and recommends professional evaluation when needed.
 
-🧠 How the System Works
+**How the System Works**
 
 ### 1. Typing Task
 - The child is shown a short, simple sentence.
