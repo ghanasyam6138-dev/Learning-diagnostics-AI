@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --primary: #6366f1; /* Indigo */
+  --secondary: #4f46e5;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-main);
+  background-color: #f3f4f6;
+  /* Soft Mesh Background Gradient */
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Main Content Container */
+body > section {
+  max-width: 850px;
+  margin: 0 auto 30px auto;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Problem & Solution Specific Layout */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--secondary);
+  border-left: 5px solid var(--primary);
+  padding-left: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+/* Steps Styling */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  border-bottom: 3px solid var(--primary);
+}
+
+/* Specific styling for the Results section (Traffic Lights) */
+section:nth-of-type(6) li {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Ethical Use section - Make it stand out as a warning/note */
+section:nth-of-type(7) {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 8px solid #6366f1;
+}
+
+/* Professional Button */
+button {
+  display: block;
+  width: 250px;
+  margin: 40px auto;
+  padding: 18px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+}
+
+button:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(99, 102, 241, 0.6);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 2.2rem; }
+  body > section { width: 92%; padding: 25px; }
+}
