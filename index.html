@@ -2,77 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LearnSense – Early Screening Tool</title>
+  <title>How LearnSense Works</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="info.css">
 </head>
 
-<body onload="initialize()"> 
+<body>
 
   <header>
-    <h1>LearnSense</h1>
-    <p>Early Screening of Learning Difficulties Using Typing Behavior</p>
-    <button id="themeToggle" onclick="toggleTheme()">
-  🌙 Dark Mode
-</button>
-
+    <h1>How LearnSense Works</h1>
+    <p>Understanding the Screening Process</p>
   </header>
 
   <section>
-    <h2>Problem</h2>
+    <h2>🧠 The Problem</h2>
     <p>
-      Learning disabilities often go undetected during early academic stages,
-      leading to academic struggles and low confidence.
+      Learning difficulties often go undetected in early academic stages.
+      Teachers may miss subtle signs, and formal assessments are expensive
+      and time-consuming.
     </p>
   </section>
 
   <section>
-    <h2>Typing Task</h2>
-    <p>Type the sentence shown below:</p>
+    <h2>💡 Our Solution</h2>
     <p>
-      <strong id="targetSentence"></strong>
+      LearnSense is an AI-assisted early screening tool that analyzes
+      <strong>typing behavior</strong> to identify possible early risk indicators.
     </p>
-
-    <form>
-      <textarea  id="typingArea" rows="5" cols="50" placeholder="Start typing here..."  onfocus="startTyping()"  onkeydown="recordKey(event); enterSubmit(event)"></textarea>
-      <br>
-      <div id="Match"></div>
-      <br>
-      <button type="button" onclick="SubmitEvent()" >Submit</button>
-      <button type="button" onclick="resetTest()">reset</button>
-    </form>
   </section>
 
   <section>
-   <h2>Collected Metrics</h2>
-   <ul id="metrics">
-     <li>Total time taken: <span id="timeTaken">—</span></li>
-     <li>Total keystrokes: <span id="keystrokes">—</span></li>
-      <li>Number of backspaces: <span id="backspaces">—</span></li>
-      <li>Number of long pauses: <span id="pauses">—</span></li>
+    <h2>⌨️ Step 1: Typing Task</h2>
+    <p>
+      The child types a simple sentence shown on the screen.
+      This task is short, non-invasive, and easy to perform.
+    </p>
+  </section>
+
+  <section>
+    <h2>📊 Step 2: Data Collection</h2>
+    <p>The system observes:</p>
+    <ul>
+      <li>Time taken to type</li>
+      <li>Total keystrokes</li>
+      <li>Number of corrections (backspaces)</li>
+      <li>Long pauses while typing</li>
     </ul>
   </section>
 
- <section>
-    <h2>Screening Result</h2>
-    <p>Risk Level: <strong id="Risk">Low / Mild / Needs Attention</strong></p>
-    <p id="Reason">Reason: Typing behavior indicators</p>
+  <section>
+    <h2>🤖 Step 3: Analysis</h2>
+    <p>
+      Using rule-based, explainable AI logic, these typing patterns are
+      compared with safe thresholds to identify potential concerns.
+    </p>
   </section>
 
   <section>
-    <h2>Ethical Note</h2>
+    <h2>🚦 Step 4: Result</h2>
     <p>
-      This system provides only early screening indicators.
-      It does not diagnose any learning disability.
-      Professional evaluation is recommended if concerns arise.
+      The system provides one of the following:
     </p>
+    <ul>
+      <li>🟢 Low Risk</li>
+      <li>🟡 Mild Risk</li>
+      <li>🔴 Needs Attention</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>⚖️ Ethical Use</h2>
+    <p>
+      LearnSense does <strong>not diagnose</strong> learning disabilities.
+      It only provides early screening indicators and recommends
+      professional evaluation if required.
+    </p>
+  </section>
+
+  <!-- Back to Main Page -->
+  <section>
+    <a href="index.html">
+      <button type="button">Go to Main Page</button>
+    </a>
   </section>
 
   <footer>
     <p>© 2026 LearnSense | Ethical & Responsible AI</p>
   </footer>
-  <script src="script.js"></script>
 
 </body>
 </html>
